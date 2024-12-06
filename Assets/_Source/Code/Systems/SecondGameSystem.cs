@@ -22,6 +22,8 @@ namespace _Source.Code.Systems
         {
             game.CoinsPerRound = 0;
             game.CurrentRow = 0;
+
+            screen.Player.rectTransform.anchoredPosition = new Vector2(-410, -250);
         }
 
         private async void HandleButtonClick(GamePointComponent point)

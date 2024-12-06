@@ -80,11 +80,11 @@ namespace _Source.Code.Systems
 
         public override void OnStateEnter()
         {
-            game.Level = game.Levels[0];
-            game.Level.gameObject.SetActive(true);
+            game.SecondLevel = game.SecondLevels[0];
+            game.SecondLevel.gameObject.SetActive(true);
                 
-            game.Levels[1].gameObject.SetActive(false);
-            game.Levels[2].gameObject.SetActive(false);
+            game.SecondLevels[1].gameObject.SetActive(false);
+            game.SecondLevels[2].gameObject.SetActive(false);
                 
             screen.FourRowsButton.transform.DOScale(Vector3.one * 1.1f, 0.1f);
             screen.FiveRowsButton.transform.localScale = Vector3.one;
@@ -113,6 +113,7 @@ namespace _Source.Code.Systems
                 foreach (var point in path.Points)
                 {
                     point.Button.image.sprite = config.SecondGameSprites[0];
+                    point.Button.image.color = Color.white;
                 }
             }
         }
